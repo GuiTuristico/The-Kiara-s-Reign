@@ -87,7 +87,7 @@ function validateField(field) {
             break;
             
         case 'apellidos':
-            // REQUISITO: 4-60 caracteres, solo letras y espacios
+            //  4-60 caracteres, solo letras y espacios
             if (fieldValue.length < 4 || fieldValue.length > 60) {
                 isValid = false;
                 errorMessage = 'Los apellidos deben tener entre 4 y 60 caracteres.';
@@ -98,7 +98,7 @@ function validateField(field) {
             break;
             
         case 'email':
-            // REQUISITO: patrón xxxxxx@xxxxx.xxx
+            // patrón xxxxxx@xxxxx.xxx
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailPattern.test(fieldValue)) {
                 isValid = false;
@@ -107,7 +107,7 @@ function validateField(field) {
             break;
             
         case 'telefono':
-            // REQUISITO: exactamente 9 números
+            //  exactamente 9 números
             if (!/^[0-9]{9}$/.test(fieldValue)) {
                 isValid = false;
                 errorMessage = 'El teléfono debe tener exactamente 9 números.';
