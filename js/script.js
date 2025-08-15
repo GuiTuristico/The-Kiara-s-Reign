@@ -30,7 +30,7 @@ function initializeNavigation() {
     });
 }
 
-// ===== VALIDACIÓN DE FORMULARIO (REQUISITO) =====
+// ===== VALIDACIÓN DE FORMULARIO =====
 function initializeFormValidation() {
     const contactForm = document.getElementById('contactForm');
     
