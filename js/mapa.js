@@ -13,7 +13,7 @@ const MASTERD_LOCATION = {
 
 // Inicializar mapa
 function initMap( ) {
-    // Crear mapa centrado en MasterD por defecto
+    // Mapa centrado en MasterD por defecto
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 15,
         center: MASTERD_LOCATION,
