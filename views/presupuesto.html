@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto | Kiaras Reign - Tu Reino de Productos Premium para Bebés</title>
+    <meta name="description" content="Solicita un presupuesto personalizado para productos ecológicos y premium para bebés. Asesoramiento experto y precios especiales en Kiaras Reign.">
+    <meta name="keywords" content="presupuesto bebés, productos ecológicos personalizados, asesoramiento infantil, Rey León, presupuesto personalizado">
+    <meta name="author" content="Kiaras Reign Baby Shop">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="light">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4A2C00;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../images/logo.png" alt="Kiaras Reign" width="320" height="92" class="me-2">
+                <span class="fw-bold">El Reino de la Pequeña Kiara</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-3 me-2" href="../index.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-3 me-2" href="productos.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-shopping-bag me-1"></i>Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-3 me-2" href="galeria.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-images me-1"></i>Galería
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-3 py-2 rounded-3 me-2" href="presupuesto.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-calculator me-1"></i>Presupuesto
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-3" href="contacto.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-phone me-1"></i>Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 120px;">
+        
+        <!-- Hero Section -->
+        <section class="container mb-5">
+            <div class="text-center">
+                <span class="badge bg-warning fs-6 mb-3 px-4 py-2">
+                    <i class="fas fa-calculator me-2"></i>Asesoramiento Personalizado
+                </span>
+                <h1 class="display-4 fw-bold mb-3" style="color: #8B4513; font-family: 'Playfair Display', serif;">
+                    Solicita tu <span style="color: #9932CC;">Presupuesto</span>
+                </h1>
+                <p class="lead text-muted mb-4">Obtén un presupuesto personalizado para productos ecológicos y premium para tu bebé. Nuestros expertos te ayudarán a encontrar la combinación perfecta de productos para las necesidades específicas de tu pequeño rey.</p>
+            </div>
+        </section>
+
+        <!-- Formulario de Presupuesto -->
+        <section class="container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-5">
+                            <h3 class="fw-bold mb-4 text-center" style="color: #8B4513;">Calculadora de Presupuesto</h3>
+                            <p class="text-muted text-center mb-5">Selecciona los productos que te interesan y obtén un presupuesto instantáneo con descuentos especiales.</p>
+                            
+                            <form id="budgetForm">
+                                
+                                <!-- Información Personal -->
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <label for="budgetName" class="form-label fw-bold">Nombre</label>
+                                        <input type="text" class="form-control form-control-lg" id="budgetName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="budgetEmail" class="form-label fw-bold">Email</label>
+                                        <input type="email" class="form-control form-control-lg" id="budgetEmail" required>
+                                    </div>
+                                </div>
+                                
+                                <!-- Selección de Productos -->
+                                <h5 class="fw-bold mb-3" style="color: #8B4513;">Selecciona los Productos</h5>
+                                
+                                <div class="row g-3 mb-4">
+                                    
+                                    <!-- Peluches -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100 border-2" style="border-color: #dee2e6;">
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input product-checkbox" type="checkbox" value="34.99" id="peluches" data-name="Peluches Orgánicos">
+                                                    <label class="form-check-label fw-bold" for="peluches">
+                                                        Peluches Orgánicos
+                                                    </label>
+                                                </div>
+                                                <p class="small text-muted mb-2">Desde €34.99</p>
+                                                <div class="mt-2">
+                                                    <label for="peluchesQty" class="form-label small">Cantidad:</label>
+                                                    <input type="number" class="form-control form-control-sm quantity-input" id="peluchesQty" min="0" max="10" value="0" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Ropa -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100 border-2" style="border-color: #dee2e6;">
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input product-checkbox" type="checkbox" value="24.99" id="ropa" data-name="Ropa Ecológica">
+                                                    <label class="form-check-label fw-bold" for="ropa">
+                                                        Ropa Ecológica
+                                                    </label>
+                                                </div>
+                                                <p class="small text-muted mb-2">Desde €24.99</p>
+                                                <div class="mt-2">
+                                                    <label for="ropaQty" class="form-label small">Cantidad:</label>
+                                                    <input type="number" class="form-control form-control-sm quantity-input" id="ropaQty" min="0" max="10" value="0" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Alimentación -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100 border-2" style="border-color: #dee2e6;">
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input product-checkbox" type="checkbox" value="19.99" id="alimentacion" data-name="Alimentación Natural">
+                                                    <label class="form-check-label fw-bold" for="alimentacion">
+                                                        Alimentación Natural
+                                                    </label>
+                                                </div>
+                                                <p class="small text-muted mb-2">Desde €19.99</p>
+                                                <div class="mt-2">
+                                                    <label for="alimentacionQty" class="form-label small">Cantidad:</label>
+                                                    <input type="number" class="form-control form-control-sm quantity-input" id="alimentacionQty" min="0" max="10" value="0" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Juguetes -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100 border-2" style="border-color: #dee2e6;">
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input product-checkbox" type="checkbox" value="29.99" id="juguetes" data-name="Juguetes Educativos">
+                                                    <label class="form-check-label fw-bold" for="juguetes">
+                                                        Juguetes Educativos
+                                                    </label>
+                                                </div>
+                                                <p class="small text-muted mb-2">Desde €29.99</p>
+                                                <div class="mt-2">
+                                                    <label for="juguetesQty" class="form-label small">Cantidad:</label>
+                                                    <input type="number" class="form-control form-control-sm quantity-input" id="juguetesQty" min="0" max="10" value="0" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!-- Resumen del Presupuesto -->
+                                <div class="card bg-light border-0 mb-4">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold mb-3" style="color: #8B4513;">Resumen del Presupuesto</h5>
+                                        <div id="budgetSummary">
+                                            <p class="text-muted">Selecciona productos para ver el resumen</p>
+                                        </div>
+                                        <hr>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold fs-5">Total:</span>
+                                            <span class="fw-bold fs-4 text-success" id="totalAmount">€0.00</span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <small class="text-success" id="discountInfo"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Comentarios Adicionales -->
+                                <div class="mb-4">
+                                    <label for="budgetComments" class="form-label fw-bold">Comentarios o Necesidades Específicas</label>
+                                    <textarea class="form-control" id="budgetComments" rows="3" placeholder="Cuéntanos sobre las necesidades específicas de tu bebé, edad, preferencias, etc."></textarea>
+                                </div>
+                                
+                                <!-- Botones -->
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="reset" class="btn btn-outline-secondary btn-lg me-md-2" onclick="resetBudget()">
+                                        <i class="fas fa-eraser me-2"></i>Limpiar
+                                    </button>
+                                    <button type="submit" class="btn btn-lg" style="background-color: #9932CC; color: white;">
+                                        <i class="fas fa-paper-plane me-2"></i>Solicitar Presupuesto
+                                    </button>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5" style="background-color: #4A2C00; color: white;">
+        <div class="container">
+            <div class="row">
+                <!-- Información de la empresa -->
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/logo.png" alt="Kiaras Reign" width="280" height="90" class="me-2">
+                        <h5 class="mb-0 fw-bold">Kiaras Reign</h5>
+                    </div>
+                    <p class="mb-3">El Reino de la Pequeña Kiara - Productos premium y ecológicos para bebés inspirados en El Rey León. Calidad, seguridad y sostenibilidad para los pequeños reyes de la casa.</p>
+                    <p class="small mb-0">
+                        <strong>Aviso Legal:</strong> Todos nuestros productos cumplen con las normativas europeas de seguridad infantil. Certificados CE y materiales 100% seguros.
+                    </p>
+                    <p class="small mt-2 mb-0">© 2024 Kiaras Reign. Todos los derechos reservados.</p>
+                </div>
+                
+                <!-- Menú de navegación -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="../index.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-home me-2"></i>Inicio
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="productos.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-shopping-bag me-2"></i>Productos
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="galeria.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-images me-2"></i>Galería
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="presupuesto.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-calculator me-2"></i>Presupuesto
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="contacto.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-phone me-2"></i>Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Redes sociales -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Síguenos</h5>
+                    <p class="mb-3">Mantente al día con nuestras últimas novedades, consejos para padres y ofertas especiales.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://facebook.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="../js/script.js"></script>
+    
+    <!-- Budget Calculator Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeBudgetCalculator();
+        });
+        
+        function initializeBudgetCalculator() {
+            const checkboxes = document.querySelectorAll('.product-checkbox');
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const quantityInput = document.getElementById(this.id + 'Qty');
+                    if (this.checked) {
+                        quantityInput.disabled = false;
+                        quantityInput.value = 1;
+                    } else {
+                        quantityInput.disabled = true;
+                        quantityInput.value = 0;
+                    }
+                    updateBudgetSummary();
+                });
+            });
+            
+            quantityInputs.forEach(input => {
+                input.addEventListener('input', updateBudgetSummary);
+            });
+            
+            document.getElementById('budgetForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitBudgetRequest();
+            });
+        }
+        
+        function updateBudgetSummary() {
+            const checkboxes = document.querySelectorAll('.product-checkbox:checked');
+            const summaryDiv = document.getElementById('budgetSummary');
+            const totalAmountSpan = document.getElementById('totalAmount');
+            const discountInfo = document.getElementById('discountInfo');
+            
+            let total = 0;
+            let summaryHTML = '';
+            
+            if (checkboxes.length === 0) {
+                summaryDiv.innerHTML = '<p class="text-muted">Selecciona productos para ver el resumen</p>';
+                totalAmountSpan.textContent = '€0.00';
+                discountInfo.textContent = '';
+                return;
+            }
+            
+            checkboxes.forEach(checkbox => {
+                const price = parseFloat(checkbox.value);
+                const quantity = parseInt(document.getElementById(checkbox.id + 'Qty').value) || 0;
+                const productName = checkbox.dataset.name;
+                const subtotal = price * quantity;
+                
+                if (quantity > 0) {
+                    summaryHTML += `
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>${productName} (x${quantity})</span>
+                            <span>€${subtotal.toFixed(2)}</span>
+                        </div>
+                    `;
+                    total += subtotal;
+                }
+            });
+            
+            // Aplicar descuentos
+            let discount = 0;
+            let discountText = '';
+            
+            if (total >= 100) {
+                discount = total * 0.15;
+                discountText = '¡15% de descuento por compra superior a €100!';
+            } else if (total >= 50) {
+                discount = total * 0.10;
+                discountText = '¡10% de descuento por compra superior a €50!';
+            }
+            
+            const finalTotal = total - discount;
+            
+            summaryDiv.innerHTML = summaryHTML;
+            totalAmountSpan.textContent = `€${finalTotal.toFixed(2)}`;
+            
+            if (discount > 0) {
+                discountInfo.innerHTML = `${discountText} Ahorras €${discount.toFixed(2)}`;
+            } else {
+                discountInfo.textContent = '';
+            }
+        }
+        
+        function resetBudget() {
+            document.querySelectorAll('.product-checkbox').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                input.disabled = true;
+                input.value = 0;
+            });
+            updateBudgetSummary();
+        }
+        
+        function submitBudgetRequest() {
+            const name = document.getElementById('budgetName').value;
+            const email = document.getElementById('budgetEmail').value;
+            const total = document.getElementById('totalAmount').textContent;
+            
+            if (!name || !email) {
+                alert('Por favor, completa tu nombre y email.');
+                return;
+            }
+            
+            if (total === '€0.00') {
+                alert('Por favor, selecciona al menos un producto.');
+                return;
+            }
+            
+            // Simular envío exitoso
+            const successModal = document.createElement('div');
+            successModal.className = 'modal fade';
+            successModal.innerHTML = `
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg">
+                        <div class="modal-body text-center p-5">
+                            <div class="mb-4">
+                                <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+                            </div>
+                            <h3 class="fw-bold mb-3" style="color: #8B4513;">¡Presupuesto Enviado!</h3>
+                            <p class="lead text-muted mb-4">
+                                Hemos recibido tu solicitud de presupuesto por ${total}. 
+                                Te enviaremos una propuesta detallada a tu email en las próximas 2 horas.
+                            </p>
+                            <button type="button" class="btn btn-lg px-4" style="background-color: #9932CC; color: white;" data-bs-dismiss="modal">
+                                <i class="fas fa-thumbs-up me-2"></i>Perfecto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(successModal);
+            const modal = new bootstrap.Modal(successModal);
+            modal.show();
+            
+            successModal.addEventListener('hidden.bs.modal', function() {
+                document.body.removeChild(successModal);
+                resetBudget();
+                document.getElementById('budgetForm').reset();
+            });
+        }
+    </script>
+</body>
+</html>
+

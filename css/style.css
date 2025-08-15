@@ -1,0 +1,309 @@
+/* ===== KIARAS REIGN - BOOTSTRAP BASED STYLES ===== */
+
+/* Modo Claro */
+html {
+    color-scheme: light;
+}
+
+/* Configuraciones generales */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #FDF2F8 0%, #F3E8FF 50%, #FEF3C7 100%);
+    min-height: 100vh;
+}
+
+/* Tipografia personalizada */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ===== EFECTOS HOVER PARA CARDS ===== */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(139, 69, 19, 0.15) !important;
+}
+
+/* ===== GALERIA - EFECTOS HOVER (REQUISITO) ===== */
+.gallery-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-image {
+    transition: all 0.3s ease;
+}
+
+.gallery-overlay {
+    background: linear-gradient(45deg, rgba(139, 69, 19, 0.8), rgba(32, 178, 170, 0.8));
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+}
+
+/* ===== NAVEGACIÓN PERSONALIZADA ===== */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== BOTONES ===== */
+.btn {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== CARRUSEL ===== */
+.carousel-item img {
+    filter: brightness(0.8);
+    transition: all 0.3s ease;
+}
+
+.carousel-item.active img {
+    filter: brightness(1);
+}
+
+.carousel-caption {
+    background: linear-gradient(45deg, rgba(139, 69, 19, 0.8), rgba(0, 0, 0, 0.5));
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* ===== BADGES ===== */
+.badge {
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* ===== CARDS ===== */
+.card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: none;
+}
+
+.card-img-top {
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* ===== ACCORDION ===== */
+.accordion-button {
+    border-radius: 12px !important;
+    font-weight: 600;
+    background-color: #f8f9fa;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #8B4513;
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.25);
+}
+
+.accordion-item {
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 8px;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #20B2AA;
+    box-shadow: 0 0 0 0.25rem rgba(32, 178, 170, 0.25);
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control.is-valid {
+    border-color: #198754;
+}
+
+/* ===== FOOTER ===== */
+footer a:hover {
+    color: #DAA520 !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* ===== RESPONSIVIDAD ===== */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 1.75rem;
+    }
+    
+    .carousel-caption {
+        padding: 10px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.25rem;
+    }
+    
+    .gallery-item {
+        margin-bottom: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 2px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .carousel-caption {
+        display: none !important;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* ===== ANIMACIONES SUAVES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .gallery-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== MAPA PERSONALIZADO ===== */
+#map {
+    border: 3px solid #8B4513;
+    transition: all 0.3s ease;
+}
+
+#map:hover {
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+}
+
+/* ===== VALIDACIÓN DE FORMULÁRIO ===== */
+.was-validated .form-control:valid {
+    border-color: #198754;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='m2.3 6.73.94-.94 1.44 1.44L7.4 4.5l.94.94-3.7 3.7z'/%3e%3c/svg%3e");
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 4.6 1.4 1.4M7.2 4.6l-1.4 1.4'/%3e%3c/svg%3e");
+}
+
+/* ===== COLORES PERSONALIZADAS CON BOOTSTRAP ===== */
+:root {
+   --bs-primary: #4A2C00;
+    --bs-secondary: #D4B28C;
+    --bs-success: #7FB069;
+    --bs-info: #9B59B6;
+    --bs-warning: #E09A4F;
+    --bs-light: #F5F5F5;
+    --bs-dark: #4A2C00;
+}
+
+/* ===== ADICIONALES ===== */
+.text-kiara-brown {
+    color: #8B4513 !important;
+}
+
+.bg-kiara-brown {
+    background-color: #8B4513 !important;
+}
+
+.text-kiara-teal {
+    color: #20B2AA !important;
+}
+
+.bg-kiara-teal {
+    background-color: #20B2AA !important;
+}
+
+.shadow-kiara {
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15) !important;
+}
+
+/* ===== LOADING STATES ===== */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #8B4513;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Kiaras Reign - Tu Reino de Productos Premium para Bebés</title>
+    <meta name="description" content="Contacta con Kiaras Reign para consultas sobre productos ecológicos para bebés. Asesoramiento experto, atención personalizada y soporte completo.">
+    <meta name="keywords" content="contacto Kiaras Reign, asesoramiento bebés, productos ecológicos, atención cliente, Rey León, soporte">
+    <meta name="author" content="Kiaras Reign Baby Shop">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="light">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Google Maps API -->
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8zC5cdGs7YTNVB9ln7GXtr52XA6IFSYc&callback=initMap">
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4A2C00;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html"> 
+                <img src="../images/logo.png" alt="Kiaras Reign" width="320" height="92" class="me-2">
+                <span class="fw-bold">El Reino de la Pequeña Kiara</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-3 me-2" href="../index.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-3 me-2" href="productos.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-shopping-bag me-1"></i>Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-3 me-2" href="galeria.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-images me-1"></i>Galería
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-3 me-2" href="presupuesto.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-calculator me-1"></i>Presupuesto
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-3 py-2 rounded-3" href="contacto.html" style="background-color: #E09A4F; color: #FEFEFE;">
+                            <i class="fas fa-phone me-1"></i>Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 120px;">
+        
+        <!-- Hero Section -->
+        <section class="container mb-5">
+            <div class="text-center">
+                <span class="badge bg-info fs-6 mb-3 px-4 py-2">
+                    <i class="fas fa-phone me-2"></i>Estamos Aquí para Ayudarte
+                </span>
+                <h1 class="display-4 fw-bold mb-3" style="color: #8B4513; font-family: 'Playfair Display', serif;">
+                    Conecta con el Reino de <span style="color: #20B2AA;">Kiara</span>
+                </h1>
+                <p class="lead text-muted mb-4">Nuestro equipo de expertos está disponible para ayudarte a encontrar los productos perfectos para tu pequeño rey. Contáctanos para consultas, asesoramiento personalizado o cualquier duda sobre nuestros productos ecológicos.</p>
+            </div>
+        </section>
+
+        <!-- Formulario y Mapa -->
+        <section class="container mb-5">
+            <div class="row g-5">
+                
+                <!-- Formulario de Contacto -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-4">
+                            <h3 class="fw-bold mb-4" style="color: #8B4513;">Envíanos un Mensaje</h3>
+                            <p class="text-muted mb-4">Completa este formulario y te responderemos lo antes posible. Nuestro equipo de expertos está listo para ayudarte.</p>
+                            
+                            <form id="contactForm" novalidate>
+                                <!-- Nombre -->
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label fw-bold">Nombre <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" 
+                                           required minlength="3" maxlength="40" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                                           placeholder="Tu nombre completo">
+                                    <div class="invalid-feedback">
+                                        El nombre debe tener entre 3 y 40 caracteres y solo puede contener letras y espacios.
+                                    </div>
+                                </div>
+                                
+                                <!-- Apellidos -->
+                                <div class="mb-3">
+                                    <label for="apellidos" class="form-label fw-bold">Apellidos <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control form-control-lg" id="apellidos" name="apellidos" 
+                                           required minlength="4" maxlength="60" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                                           placeholder="Tus apellidos">
+                                    <div class="invalid-feedback">
+                                        Los apellidos deben tener entre 4 y 60 caracteres y solo pueden contener letras y espacios.
+                                    </div>
+                                </div>
+                                
+                                <!-- Correo Electrónico -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-bold">Correo Electrónico <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control form-control-lg" id="email" name="email" 
+                                           required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                           placeholder="tu@email.com">
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce un correo electrónico válido (ejemplo: usuario@dominio.com).
+                                    </div>
+                                </div>
+                                
+                                <!-- Teléfono -->
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label fw-bold">Teléfono <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control form-control-lg" id="telefono" name="telefono" 
+                                           required pattern="[0-9]{9}" minlength="9" maxlength="9"
+                                           placeholder="123456789">
+                                    <div class="invalid-feedback">
+                                        El teléfono debe tener exactamente 9 números.
+                                    </div>
+                                </div>
+                                
+                                <!-- Comentarios -->
+                                <div class="mb-4">
+                                    <label for="comentarios" class="form-label fw-bold">Comentarios</label>
+                                    <textarea class="form-control" id="comentarios" name="comentarios" rows="4" 
+                                              placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                                    <div class="form-text">Este campo es opcional.</div>
+                                </div>
+                                
+                                <!-- Botones -->
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="reset" class="btn btn-outline-secondary btn-lg me-md-2">
+                                        <i class="fas fa-eraser me-2"></i>Limpiar Formulario
+                                    </button>
+                                    <button type="submit" class="btn btn-lg" style="background-color: #20B2AA; color: white;">
+                                        <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa Dinámico -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-4">
+                            <h3 class="fw-bold mb-4" style="color: #8B4513;">Nuestra Ubicación</h3>
+                            <p class="text-muted mb-4">Visítanos en nuestras oficinas o encuentra la ubicación más cercana a ti.</p>
+                            
+                            <!-- Mapa dinámico -->
+                            <div id="map" class="rounded-3 mb-4" style="height: 400px; border: 2px solid #4A2C00;"></div>
+
+                            <div id="location-status" class="text-center mb-3">
+                             <small class="text-muted">Cargando mapa...</small>
+                            </div>
+
+                            <!-- Controles del mapa -->
+                            <div class="d-flex gap-2 justify-content-center">
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="centerOnUser()">
+                                <i class="fas fa-location-arrow me-1"></i>Mi Ubicación
+                                </button>
+                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="centerOnMasterD()">
+                                <i class="fas fa-building me-1"></i>MasterD Madrid
+                                </button>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Información de contacto -->
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt text-danger me-3 fs-5"></i>
+                                        <div>
+                                            <strong>Dirección:</strong><br>
+                                            <span class="text-muted"> C. de Alonso Cano, 44, 46<br>28003 Madrid, España</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-phone text-success me-3 fs-5"></i>
+                                        <div>
+                                            <strong>Teléfono:</strong><br>
+                                            <span class="text-muted">+34 91 123 4567</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-envelope text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <strong>Email:</strong><br>
+                                            <span class="text-muted">info@kiarasreign.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-clock text-warning me-3 fs-5"></i>
+                                        <div>
+                                            <strong>Horario:</strong><br>
+                                            <span class="text-muted">Lun-Vie: 9:00-18:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-headset text-info me-3 fs-5"></i>
+                                        <div>
+                                            <strong>Soporte:</strong><br>
+                                            <span class="text-muted">24/7 Online</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5" style="background-color: #4A2C00; color: white;">
+        <div class="container">
+            <div class="row">
+                <!-- Información de la empresa -->
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/logo.png" alt="Kiaras Reign" width="280" height="90" class="me-2">
+                        <h5 class="mb-0 fw-bold">Kiaras Reign</h5>
+                    </div>
+                    <p class="mb-3">El Reino de la Pequeña Kiara - Productos premium y ecológicos para bebés inspirados en El Rey León. Calidad, seguridad y sostenibilidad para los pequeños reyes de la casa.</p>
+                    <p class="small mb-0">
+                        <strong>Aviso Legal:</strong> Todos nuestros productos cumplen con las normativas europeas de seguridad infantil. Certificados CE y materiales 100% seguros.
+                    </p>
+                    <p class="small mt-2 mb-0">© 2024 Kiaras Reign. Todos los derechos reservados.</p>
+                </div>
+                
+                <!-- Menú de navegación -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="../index.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-home me-2"></i>Inicio
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="productos.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-shopping-bag me-2"></i>Productos
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="galeria.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-images me-2"></i>Galería
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="presupuesto.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-calculator me-2"></i>Presupuesto
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="contacto.html" class="text-decoration-none" style="color: #D4B28C;">
+                                <i class="fas fa-phone me-2"></i>Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Redes sociales -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Síguenos</h5>
+                    <p class="mb-3">Mantente al día con nuestras últimas novedades, consejos para padres y ofertas especiales.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://facebook.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" class="text-decoration-none fs-3" style="color: #F5DEB3;" title="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="../js/script.js"></script>
+    <script src="../js/mapa.js"></script>
+</body>
+</html>
+
